@@ -44,3 +44,30 @@ code {
   font-size: 30px;
   font-weight: 800;
 }
+
+/* search reault css  */
+
+.searchResult {
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  border: 1px solid green;
+}
+
+.searchResult .left img {
+  height: 170px;
+}
+
+.searchResult .right {
+  padding-left: 30px;
+}
+
+.searchResult .right h1 {
+  margin-top: 5px;
+}
+
+.stats div {
+  font-size: 15px;
+}

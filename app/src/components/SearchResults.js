@@ -1,9 +1,15 @@
 import React from 'react'
 
+import SearchResultItem from './SearchResultItem'
+
 function SearchResult(props) {
+  const { data } = props
+
   return (
     <>
-      <div>search Result </div>
+      {data.map((item) => (
+        <SearchResultItem item={item} />
+      ))}
     </>
   )
 }
