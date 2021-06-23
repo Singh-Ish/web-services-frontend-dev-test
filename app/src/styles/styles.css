@@ -30,17 +30,6 @@ code {
   background: white;
 }
 
-#searchBar {
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 10px;
-}
-
 #logo {
   font-size: 30px;
   font-weight: 800;
@@ -53,7 +42,30 @@ code {
   margin: 15px;
 }
 
+/******* note ********/
+
+.note {
+  color: red;
+  font-size: 0.75em;
+  margin-left: 30px;
+}
+
 /********* search results css  **********/
+
+#searchInput {
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.searchBar {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
 .searchResult {
   display: flex;

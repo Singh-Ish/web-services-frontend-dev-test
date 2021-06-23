@@ -5,7 +5,7 @@ import SearchResultItem from './SearchResultItem'
 function SearchResult(props) {
   const { data, searchText, setTagList, tagList } = props
 
-  // filtering the content based on the search textto be displayed
+  // filtering the content based on the search textto be displayed ; this filters by name and fullname
   const filterData = data.filter((item) => {
     if (searchText == '') {
       return item

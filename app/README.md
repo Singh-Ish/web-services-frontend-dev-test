@@ -8,10 +8,10 @@ git clone https://github.com/Singh-Ish/web-services-frontend-dev-test.git
 
 ## Run project locally
 
-Once you have the local copy fro the project
+Once you have the local copy fro the project, check you are on which branch . It should be " master " branch
 
 ```
-cd app
+cd  web-services-frontend-dev-test/app
 ```
 
 ### running project
