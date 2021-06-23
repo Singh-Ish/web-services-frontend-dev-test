@@ -3,7 +3,7 @@ import React from 'react'
 import SearchResultItem from './SearchResultItem'
 
 function SearchResult(props) {
-  const { data, searchText } = props
+  const { data, searchText, setTagList, tagList } = props
 
   const filterData = data.filter((item) => {
     if (searchText == '') {
@@ -21,7 +21,11 @@ function SearchResult(props) {
     <>
       {filterData.map((item, index) => (
         <div index={item.id}>
-          <SearchResultItem item={item} />
+          <SearchResultItem
+            item={item}
+            setTagList={setTagList}
+            tagList={tagList}
+          />
         </div>
       ))}
     </>

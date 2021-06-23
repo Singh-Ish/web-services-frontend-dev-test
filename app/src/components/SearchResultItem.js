@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TagsComponent from './TagsComponent'
 
 function SearchResultItem(props) {
-  const { item } = props
+  const { item, setTagList, tagList } = props
   const tagInput = React.createRef()
   const [isExpanded, setIsExpanded] = useState(false)
   const [tags, setTags] = useState([])
@@ -15,13 +15,12 @@ function SearchResultItem(props) {
 
   const onTagInputAreaChange = (e) => {
     setTagValue(e.target.value)
-    console.log(e.target.value)
   }
 
   const addtag = () => {
     setTags([...tags, tagValue])
     tagInput.current.value = ''
-    console.log(tags)
+    setTagList([...tagList, tagValue])
   }
 
   return (
