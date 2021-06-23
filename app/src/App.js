@@ -16,7 +16,9 @@ function App() {
       <Navbar />
       <div className="main">
         <SearchBar searchText={searchText} handleChange={handleChange} />
-        <SearchResult data={data} />
+        <div className="card">
+          <SearchResult data={data} />
+        </div>
       </div>
     </div>
   )

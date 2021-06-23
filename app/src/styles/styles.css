@@ -24,10 +24,9 @@ code {
 }
 
 .main {
-  width: 700px;
+  width: 600px;
   margin: 0 auto;
-  margin-top: 20px;
-  border: 1px solid red;
+  margin-top: 30px;
   background: white;
 }
 
@@ -35,9 +34,11 @@ code {
   align-items: center;
   width: 90%;
   height: 50px;
-  padding-left: 10px;
   font-size: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
 }
 
 #logo {
@@ -45,23 +46,36 @@ code {
   font-weight: 800;
 }
 
-/* search reault css  */
+/********* icon *********/
+
+.icon {
+  float: right;
+  margin: 15px;
+}
+
+/********* search reault css  **********/
 
 .searchResult {
   display: flex;
   box-sizing: border-box;
-  padding: 10px;
-  margin-bottom: 20px;
-
-  border: 1px solid green;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 5px 8px 2px rgb(83 83 83 / 10%);
+  transition: 0.3s;
 }
 
 .searchResult .left img {
-  height: 170px;
+  width: 120px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 100%;
 }
 
 .searchResult .right {
   padding-left: 30px;
+  margin-bottom: 20px;
+
+  width: 100%;
 }
 
 .searchResult .right h1 {
