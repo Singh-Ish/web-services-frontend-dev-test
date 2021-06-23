@@ -46,6 +46,12 @@ function SearchResultItem(props) {
               <div>durability: {item.powerstats.durability} </div>
               <div>power: {item.powerstats.power} </div>
               <div>combat: {item.powerstats.combat} </div>
+
+              <h3> Tags </h3>
+              <div className="tagInput">
+                <input id="tagBar" type="tag" placeholder="Add Tag " />
+                <button className="tagButton">Add Tag</button>
+              </div>
             </div>
           )}
         </div>
