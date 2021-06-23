@@ -5,6 +5,7 @@ import SearchResultItem from './SearchResultItem'
 function SearchResult(props) {
   const { data, searchText, setTagList, tagList } = props
 
+  // filtering the content based on the search textto be displayed
   const filterData = data.filter((item) => {
     if (searchText == '') {
       return item
@@ -17,10 +18,9 @@ function SearchResult(props) {
   })
 
   return (
-    // <> need to add unique key
     <>
-      {filterData.map((item, index) => (
-        <div index={item.id}>
+      {filterData.map((item) => (
+        <div key={item.id}>
           <SearchResultItem
             item={item}
             setTagList={setTagList}

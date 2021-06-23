@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import SearchBar from './components/SearchBar'
-import SearchResult from './components/SearchResults'
+import SearchResult from './components/SearchResult/SearchResults'
 import data from './data/superheroes.json'
 
 function App() {
