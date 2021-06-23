@@ -1,7 +1,8 @@
 import React from 'react'
 
 function SearchBar(props) {
-  const { handleChange, searchText } = props
+  const { searchText, setSearchText } = props
+
   return (
     <>
       <div>
@@ -9,8 +10,9 @@ function SearchBar(props) {
           id="searchBar"
           type="search"
           placeholder="Search your superhero "
-          onChange={handleChange}
-          value={searchText}
+          onChange={(event) => {
+            setSearchText(event.target.value)
+          }}
         />
       </div>
     </>
