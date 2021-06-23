@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SearchBar(props) {
-  const { searchText, setSearchText } = props
+  const { setSearchText } = props
 
   return (
     <>

@@ -19,8 +19,10 @@ function SearchResult(props) {
   return (
     // <> need to add unique key
     <>
-      {filterData.map((item) => (
-        <SearchResultItem item={item} />
+      {filterData.map((item, index) => (
+        <div index={item.id}>
+          <SearchResultItem item={item} />
+        </div>
       ))}
     </>
   )

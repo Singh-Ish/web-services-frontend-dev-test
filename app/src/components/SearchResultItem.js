@@ -2,11 +2,25 @@ import React, { useState } from 'react'
 
 function SearchResultItem(props) {
   const { item } = props
+  const tagInput = React.createRef()
   const [isExpanded, setIsExpanded] = useState(false)
+  const [tags, setTags] = useState([])
+
+  const [tagValue, setTagValue] = useState('')
 
   function handleButtonClick(e) {
-    console.log('button in pressed')
     setIsExpanded(!isExpanded)
+  }
+
+  const onTagInputAreaChange = (e) => {
+    setTagValue(e.target.value)
+    console.log(e.target.value)
+  }
+
+  const addtag = () => {
+    setTags([...tags, tagValue])
+    tagInput.current.value = ''
+    console.log(tags)
   }
 
   return (
@@ -49,8 +63,23 @@ function SearchResultItem(props) {
 
               <h3> Tags </h3>
               <div className="tagInput">
-                <input id="tagBar" type="tag" placeholder="Add Tag " />
-                <button className="tagButton">Add Tag</button>
+                <div>
+                  <input
+                    id="tagBar"
+                    type="tag"
+                    placeholder="Add Tag "
+                    onChange={(e) => onTagInputAreaChange(e)}
+                    ref={tagInput}
+                  />
+                  <button className="tagButton" onClick={(e) => addtag()}>
+                    Add Tag
+                  </button>
+                </div>
+                <div>
+                  {tags.map((tag, index) => (
+                    <div>{tag}</div>
+                  ))}
+                </div>
               </div>
             </div>
           )}

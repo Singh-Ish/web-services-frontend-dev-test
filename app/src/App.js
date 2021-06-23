@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="main">
-        <SearchBar searchText={searchText} setSearchText={setSearchText} />
+        <SearchBar setSearchText={setSearchText} />
         <div className="card">
           <SearchResult data={data} searchText={searchText} />
         </div>
