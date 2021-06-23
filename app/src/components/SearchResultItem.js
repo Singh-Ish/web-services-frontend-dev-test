@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import TagsComponent from './TagsComponent'
 
 function SearchResultItem(props) {
   const { item } = props
@@ -75,9 +76,9 @@ function SearchResultItem(props) {
                     Add Tag
                   </button>
                 </div>
-                <div>
+                <div className="tagRow">
                   {tags.map((tag, index) => (
-                    <div>{tag}</div>
+                    <TagsComponent tag={tag} />
                   ))}
                 </div>
               </div>
