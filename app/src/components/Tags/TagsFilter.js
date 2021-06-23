@@ -3,11 +3,13 @@ import '../../styles/tags.css'
 
 function TagsFilter(props) {
   const { tag, index } = props
-  const ClickedTag = () => {
-    setIsClicked(!isClicked)
-  }
 
   const [isClicked, setIsClicked] = useState(false)
+
+  const ClickedTag = () => {
+    setIsClicked(!isClicked)
+    console.log(isClicked)
+  }
 
   return (
     <>

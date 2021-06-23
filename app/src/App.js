@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import SearchBar from './components/SearchBar'
 import SearchResult from './components/SearchResult/SearchResults'
 import data from './data/superheroes.json'
+import TagsFilter from './components/Tags/TagsFilter'
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -20,9 +21,7 @@ function App() {
 
         <div className="tag-List">
           {uniqueTags.map((tag, index) => (
-            <span className="tagListItem" key={index}>
-              {tag}
-            </span>
+            <TagsFilter tag={tag} index={index} />
           ))}
         </div>
         <div className="card">
