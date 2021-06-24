@@ -15,8 +15,6 @@ function App() {
     return e
   })
 
-  console.log(data)
-
   // getting the unique tags
   const uniqueTags = tagList.filter(function (elem, pos) {
     return tagList.indexOf(elem) == pos
@@ -30,7 +28,7 @@ function App() {
 
         <div className="tag-List">
           {uniqueTags.map((tag, index) => (
-            <TagsFilter tag={tag} index={index} />
+            <TagsFilter tag={tag} key={index} />
           ))}
         </div>
         <div className="card">

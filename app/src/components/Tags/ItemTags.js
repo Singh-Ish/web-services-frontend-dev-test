@@ -13,7 +13,7 @@ function ItemTags(props) {
   }
 
   useEffect(() => {
-    // saving the tag to the respective json data item
+    // // saving the tag to the respective json data item
     data[index] = { ...data[index], itemTags: tags }
   })
 

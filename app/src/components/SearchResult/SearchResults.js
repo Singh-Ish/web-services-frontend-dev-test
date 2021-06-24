@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import SearchResultItem from './SearchResultItem'
 
@@ -7,8 +7,12 @@ function SearchResult(props) {
 
   const selectedTag = 'love'
 
+  useEffect(() => {
+    console.log(data)
+  })
+
   // filtering the content based on the search textto be displayed ; this filters by name and fullname
-  const filterData = data.filter((item) => {
+  var filterData = data.filter((item) => {
     if (searchText == '') {
       // if (data.itemTags.filter(data.itemTags == selectedTag)) {
       //   return item
