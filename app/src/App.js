@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import SearchBar from './components/SearchBar'
 import SearchResult from './components/SearchResult/SearchResults'
-import data from './data/superheroes.json'
+import info from './data/superheroes.json'
 import TagsFilter from './components/Tags/TagsFilter'
 
 function App() {
@@ -12,7 +12,9 @@ function App() {
   const uniqueTags = tagList.filter(function (elem, pos) {
     return tagList.indexOf(elem) == pos
   })
+  const data = info
 
+  console.log(data)
   return (
     <div className="App">
       <Navbar />

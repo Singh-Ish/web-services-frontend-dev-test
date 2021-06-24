@@ -19,12 +19,14 @@ function SearchResult(props) {
 
   return (
     <>
-      {filterData.map((item) => (
+      {filterData.map((item, index) => (
         <div key={item.id}>
           <SearchResultItem
             item={item}
             setTagList={setTagList}
             tagList={tagList}
+            data={data}
+            index={index}
           />
         </div>
       ))}

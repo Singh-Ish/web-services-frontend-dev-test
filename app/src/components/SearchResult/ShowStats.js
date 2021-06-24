@@ -2,7 +2,7 @@ import React from 'react'
 import ItemTags from '../Tags/ItemTags'
 
 function ShowStats(props) {
-  const { item, setTagList, tagList } = props
+  const { item, setTagList, tagList, data, index } = props
 
   return (
     <>
@@ -15,7 +15,13 @@ function ShowStats(props) {
         <div>power: {item.powerstats.power} </div>
         <div>combat: {item.powerstats.combat} </div>
 
-        <ItemTags item={item} setTagList={setTagList} tagList={tagList} />
+        <ItemTags
+          item={item}
+          setTagList={setTagList}
+          tagList={tagList}
+          data={data}
+          index={index}
+        />
       </div>
     </>
   )
