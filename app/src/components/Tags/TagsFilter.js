@@ -1,24 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/tags.css'
 
 function TagsFilter(props) {
-  const { tag, index } = props
+  const { tag, index, setSelectedTag } = props
 
   const [isClicked, setIsClicked] = useState(false)
 
+  useEffect(() => {
+    isClicked ? setSelectedTag(tag) : setSelectedTag('')
+  })
+
   const ClickedTag = () => {
     setIsClicked(!isClicked)
-    console.log(isClicked)
   }
 
   return (
     <>
-      <span
-        style={{ background: isClicked ? 'green' : 'black' }}
-        className="tagListItem"
-        key={index}
-        onClick={ClickedTag}
-      >
+      <span className="tagListItem" key={index} onClick={ClickedTag}>
         {tag}
       </span>
     </>

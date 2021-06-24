@@ -9,6 +9,8 @@ function App() {
   const [searchText, setSearchText] = useState('')
   const [tagList, setTagList] = useState([])
 
+  const [selectedTag, setSelectedTag] = useState('')
+
   // adding an empty tag list
   const data = info.map((e) => {
     e.itemTags = []
@@ -20,6 +22,9 @@ function App() {
     return tagList.indexOf(elem) == pos
   })
 
+  //
+  console.log(selectedTag)
+
   return (
     <div className="App">
       <Navbar />
@@ -28,7 +33,7 @@ function App() {
 
         <div className="tag-List">
           {uniqueTags.map((tag, index) => (
-            <TagsFilter tag={tag} key={index} />
+            <TagsFilter tag={tag} key={index} setSelectedTag={setSelectedTag} />
           ))}
         </div>
         <div className="card">
@@ -37,6 +42,7 @@ function App() {
             searchText={searchText}
             setTagList={setTagList}
             tagList={tagList}
+            selectedTag={selectedTag}
           />
         </div>
       </div>

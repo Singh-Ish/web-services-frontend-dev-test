@@ -27,6 +27,7 @@ code {
   margin: 0 auto;
   margin-top: 30px;
   background: white;
+  min-height: 200px;
 }
 
 #logo {
@@ -105,5 +106,6 @@ code {
     margin: 0 auto;
     margin-top: 30px;
     background: white;
+    min-height: 200px;
   }
 }
