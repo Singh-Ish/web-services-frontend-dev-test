@@ -9,12 +9,19 @@ function App() {
   const [searchText, setSearchText] = useState('')
   const [tagList, setTagList] = useState([])
 
+  // adding an empty tag list
+  const data = info.map((e) => {
+    e.itemTags = []
+    return e
+  })
+
+  console.log(data)
+
+  // getting the unique tags
   const uniqueTags = tagList.filter(function (elem, pos) {
     return tagList.indexOf(elem) == pos
   })
-  const data = info
 
-  console.log(data)
   return (
     <div className="App">
       <Navbar />
