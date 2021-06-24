@@ -16,7 +16,6 @@ code {
 /* styles for application  */
 .navbar {
   height: 70px;
-
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -96,4 +95,15 @@ code {
 
 .stats div {
   font-size: 15px;
+}
+
+/*** responsive code ****/
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: white;
+  }
 }
