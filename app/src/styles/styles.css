@@ -16,7 +16,6 @@ code {
 /* styles for application  */
 .navbar {
   height: 70px;
-
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -28,17 +27,7 @@ code {
   margin: 0 auto;
   margin-top: 30px;
   background: white;
-}
-
-#searchBar {
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 10px;
+  min-height: 200px;
 }
 
 #logo {
@@ -53,7 +42,30 @@ code {
   margin: 15px;
 }
 
+/******* note ********/
+
+.note {
+  color: red;
+  font-size: 0.75em;
+  margin-left: 30px;
+}
+
 /********* search results css  **********/
+
+#searchInput {
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.searchBar {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
 .searchResult {
   display: flex;
@@ -84,4 +96,16 @@ code {
 
 .stats div {
   font-size: 15px;
+}
+
+/*** responsive code ****/
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: white;
+    min-height: 200px;
+  }
 }

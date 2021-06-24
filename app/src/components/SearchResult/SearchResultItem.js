@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ShowStats from './ShowStats'
 
 function SearchResultItem(props) {
-  const { item, setTagList, tagList } = props
+  const { item, setTagList, tagList, data, index } = props
   const [isExpanded, setIsExpanded] = useState(false)
   function handleButtonClick(e) {
     setIsExpanded(!isExpanded)
@@ -43,7 +43,13 @@ function SearchResultItem(props) {
           {/* the expanded content  */}
 
           {isExpanded && (
-            <ShowStats item={item} setTagList={setTagList} tagList={tagList} />
+            <ShowStats
+              item={item}
+              setTagList={setTagList}
+              tagList={tagList}
+              data={data}
+              index={index}
+            />
           )}
         </div>
       </div>

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/tags.css'
 
 function ItemTags(props) {
-  const { item, setTagList, tagList } = props
+  const { item, setTagList, tagList, data, index } = props
 
   const tagInput = React.createRef()
   const [tags, setTags] = useState([])
@@ -12,6 +12,11 @@ function ItemTags(props) {
     setTagValue(e.target.value)
   }
 
+  useEffect(() => {
+    // // saving the tag to the respective json data item
+    data[index] = { ...data[index], itemTags: tags }
+  })
+
   const addtag = () => {
     setTags([...tags, tagValue])
 
@@ -20,9 +25,6 @@ function ItemTags(props) {
 
     // adding tag list to main tag list to be shown
     setTagList([...tagList, tagValue])
-
-    // saving the tag to the respective json data item
-    // console.log(item)
   }
 
   return (
