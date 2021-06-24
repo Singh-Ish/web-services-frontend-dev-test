@@ -39,10 +39,10 @@
 
 .tagListItem {
   padding: 10px;
-  background: black;
   margin-right: 1em;
   color: white;
   border-radius: 0.25rem;
   font-size: 0.75em;
   margin-bottom: 20px;
+  background: black;
 }

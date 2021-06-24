@@ -1,16 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import SearchBar from './components/SearchBar'
 import SearchResult from './components/SearchResult/SearchResults'
-import data from './data/superheroes.json'
+import info from './data/superheroes.json'
+import TagsFilter from './components/Tags/TagsFilter'
 
 function App() {
   const [searchText, setSearchText] = useState('')
   const [tagList, setTagList] = useState([])
 
+  const [selectedTag, setSelectedTag] = useState('')
+
+  // adding an empty tag list
+  const data = info.map((e) => {
+    e.itemTags = []
+    return e
+  })
+
+  // getting the unique tags
   const uniqueTags = tagList.filter(function (elem, pos) {
     return tagList.indexOf(elem) == pos
   })
+
+  //
+  console.log(selectedTag)
 
   return (
     <div className="App">
@@ -20,9 +33,7 @@ function App() {
 
         <div className="tag-List">
           {uniqueTags.map((tag, index) => (
-            <span className="tagListItem" key={index}>
-              {tag}
-            </span>
+            <TagsFilter tag={tag} key={index} setSelectedTag={setSelectedTag} />
           ))}
         </div>
         <div className="card">
@@ -31,6 +42,7 @@ function App() {
             searchText={searchText}
             setTagList={setTagList}
             tagList={tagList}
+            selectedTag={selectedTag}
           />
         </div>
       </div>
